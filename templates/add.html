@@ -1,0 +1,57 @@
+{% load static %}
+<html>
+<head>
+<title>Arithmatic operations</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+h2{
+    margin-top:80px;
+    color:white;
+    width: 100%;
+    text-align:center;
+   
+}
+#id1{
+    justify-content:center;
+    text-align:center;
+    margin-left:18px;
+    background-color:#E0FFFF;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="col-md-3 mt-4">
+<img src="{% static 'images/2.jpg' %}" height="570px" width="1100px">
+</div>
+<div class="col-md-6">
+<center>
+<form action="./arithmaticapp/output" method="get">
+
+    {% csrf_token %}
+    <h2 class="headertekst">Enter First Number</h2>
+    <h1><input type="text" name="t1" id="id1"></h1>
+    <br>
+    <h2>Enter Second Number</h2>
+    <h1><input type="text" name="t2" id="id1"></h1>
+    <br>
+    
+    <div style="margin-left:40px;width:250px">
+    <input style="background-color: #F08080; width:75px; height: 40px" type="submit" value="add" name="but">
+    <input style="background-color: #F08080; width:75px; height: 40px" type="submit" value="sub" name="but">
+    <input style="background-color: #F08080; width:75px; height: 40px" type="submit" value="mul" name="but">
+    <input style="background-color: #F08080; width:75px; height: 40px" type="submit" value="div" name="but">
+    </div>
+</form>
+</center>
+</div>
+</body>
+</html>
+
+<!--background-size: cover;   background="{% static 'images/image1.jpg' %}" height="600px" width="1100px">
